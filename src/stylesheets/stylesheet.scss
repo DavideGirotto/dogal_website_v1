@@ -7,23 +7,25 @@
 @import 'node_modules/bulma/sass/grid/columns.sass';
 @import 'node_modules/bulma/sass/layout/_all.sass';
 
-.navbar {
+nav {
+	&.is-fixed-top{
+		left: 0;
+    	position: fixed;
+    	right: 0;
+    	z-index: 30;
+	}
+
 	&.is-transparent {
 		background-color: transparent;
 		background-image: none;
 	}
 
-	.navbar-start{
-		margin: 0 auto;
+	&.nav-container{
+		margin-top: 2%;
 	}
 
-	a.navbar-item{
-		color: #FFF;
-		padding: 32px;
-
-		&:hover, &:active, &:focus{
-			color: #FFF;
-		}
+	.nav-menu{
+		justify-content: space-between;
 	}
 }
 
@@ -33,13 +35,20 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	position: relative;
 
-	.container{
-		text-align: center;
+	.logo-container{
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		transform: translateY(-50%);
+	}
 
-		.logo{
-			width: 605px;
-		}
+	.payoff-container{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		margin-bottom: 3%;
 	}
 }
 
@@ -48,6 +57,13 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	text-shadow: 0em 0em 0.2em rgba(0,0,0,0.2);
+
+	.content{
+		p{
+			 margin-bottom: 1em;
+		}
+	}
 }
 
 #dogal-inspiration-02{
