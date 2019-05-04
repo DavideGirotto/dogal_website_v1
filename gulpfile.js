@@ -27,6 +27,10 @@ var paths = {
     src: 'src/assets/images/**/*',
     dest: 'dist/assets/images'
   },
+  fonts: {
+    src: 'src/assets/fonts/**/*',
+    dest: 'dist/assets/fonts'
+  },
   javascripts:{
     src: 'src/javascripts/**/*',
     dest: 'dist/javascripts/'
@@ -76,6 +80,15 @@ function images() {
       ])
     )
     .pipe(gulp.dest(paths.images.dest));
+}
+
+//fonts task
+function fonts(){
+  return gulp
+    .src(paths.fonts.src)
+    .pipe(plumber())
+    .pipe(gulp.dest(paths.fonts.dest))
+    .pipe(browsersync.stream());
 }
 
 // CSS task
@@ -133,11 +146,12 @@ function watchFiles() {
     gulp.series(browserSyncReload)
   );
   gulp.watch(paths.images.src, images);
+  gulp.watch(paths.fonts.src, fonts);
 }
 
 // define complex tasks
 var js = gulp.series(scriptsLint, scripts);
-var build = gulp.series(clean, gulp.parallel(css, html, images, js));
+var build = gulp.series(clean, gulp.parallel(css, html, images, fonts, js));
 var watch = gulp.parallel(watchFiles, browserSync);
 
 // export tasks
