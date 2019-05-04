@@ -1,0 +1,42 @@
+//  Fonts definitions
+//  -----------------------------
+//
+//  Table of Contents:
+//
+//   1. Paths
+//   2. Ogg Roman
+//   3. Helvetica Light
+
+
+// 1. Paths
+// ---------
+$ogg-roman-font-path: "../assets/fonts/ogg-roman/";
+$helvetica-light-font-path: "../assets/fonts/helevetica-light/";
+
+// 2. Ogg Roman
+// ---------
+
+@font-face {
+  font-family: 'Ogg Roman';
+  font-style: normal;
+  src: url('#{$ogg-roman-font-path}Ogg-Roman.eot'); /* IE9 Compat Modes */
+  src: local('Ogg Roman'), local('Ogg-Roman'),
+       url('#{$ogg-roman-font-path}Ogg-Roman.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('#{$ogg-roman-font-path}Ogg-Roman.woff') format('woff'), /* Modern Browsers */
+       url('#{$ogg-roman-font-path}Ogg-Roman.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('#{$ogg-roman-font-path}Ogg-Roman.svg#Ogg-Roman') format('svg'); /* Legacy iOS */
+}
+
+// 3. Helvetica Light
+// ---------
+
+@font-face {
+  font-family: 'Helvetica Light';
+  font-style: normal;
+  src: url('#{$helvetica-light-font-path}Helvetica-Light.eot'); /* IE9 Compat Modes */
+  src: local('Helvetica Light'), local('Helvetica-Light'),
+       url('#{$helvetica-light-font-path}Helvetica-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('#{$helvetica-light-font-path}Helvetica-Light.woff') format('woff'), /* Modern Browsers */
+       url('#{$helvetica-light-font-path}Helvetica-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('#{$helvetica-light-font-path}Helvetica-Light.svg#Helvetica-Light') format('svg'); /* Legacy iOS */
+}

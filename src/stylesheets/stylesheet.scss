@@ -7,7 +7,22 @@
 @import 'node_modules/bulma/sass/grid/columns.sass';
 @import 'node_modules/bulma/sass/layout/_all.sass';
 
+@import './_fonts.scss';
+
+body{
+	font-family: 'Helvetica-Light', Helvetica, Arial, sans-serif;
+	line-height: 2rem
+}
+
+.title, .content h1, .content h2{
+	font-family: 'Ogg Roman', "Times New Roman", Times, serif;
+	font-weight: normal;
+	line-height: 2.5rem;
+}
+
 nav {
+	font-size: 20px;
+
 	&.is-fixed-top{
 		left: 0;
     	position: fixed;
