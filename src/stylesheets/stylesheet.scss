@@ -20,6 +20,10 @@ body{
 	line-height: 2.5rem;
 }
 
+.has-text-shadow{
+	text-shadow: 0em 0em 3em rgba(0,0,0,1);
+}
+
 nav {
 	font-size: 20px;
 
@@ -57,6 +61,27 @@ nav {
 		top: 50%;
 		width: 100%;
 		transform: translateY(-50%);
+
+		.navbar-logo{
+			display: none;
+		}
+
+		&.stick{
+			position: fixed;
+			top: 96px;
+			left: 50%;
+			width: 128px;
+			transform: translateX(-50%);
+			display: block;
+
+			.column{
+				display: none;
+			}
+
+			.navbar-logo{
+				display: block;
+			}
+		}
 	}
 
 	.payoff-container{
@@ -65,6 +90,7 @@ nav {
 		width: 100%;
 		margin-bottom: 3%;
 	}
+
 }
 
 #dogal-inspiration-01{
@@ -72,7 +98,6 @@ nav {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	text-shadow: 0em 0em 0.2em rgba(0,0,0,0.2);
 
 	.content{
 		p{
@@ -96,7 +121,7 @@ nav {
 	background: url('../assets/images/dogal-inspiration.png');
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center;
+	background-position: right;
 }
 
 #dogal-contacts{
