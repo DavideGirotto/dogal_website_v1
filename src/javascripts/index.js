@@ -12,6 +12,14 @@ function stickyLogo(initPosition){
     }
 }
 
+function mobileMenu(){
+	$('.navbar-burger, #menu-modal a').click(function(){
+		$('.navbar-burger').toggleClass('is-active');
+		$('#menu-modal').toggleClass('opened');
+		$('html').toggleClass('modal-opened');
+	});
+}
+
 $(function () {
 	var initialPosition = $('.logo-container').offset().top - 96;
     
@@ -20,4 +28,5 @@ $(function () {
    	});
 
     stickyLogo(initialPosition);
+    mobileMenu();
 });

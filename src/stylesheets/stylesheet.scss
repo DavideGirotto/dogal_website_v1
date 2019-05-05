@@ -34,6 +34,29 @@ body{
 	text-shadow: 0em 0em 3em rgba(0,0,0,1);
 }
 
+.navbar-burger{
+	right: 16px;
+	top: 12px;
+	color: #FFF;
+	z-index: 99;
+
+	&.is-transparent {
+		background-color: transparent;
+		background-image: none;
+	}
+
+	&.is-fixed-top {
+		position: fixed;
+	}
+
+	span{
+		height: 2px;
+		width: 32px;
+	}
+
+	&:hover{ color: #FFF; }
+}
+
 nav {
 	font-size: 20px;
 
@@ -58,6 +81,38 @@ nav {
 	}
 }
 
+.modal-opened{
+	overflow: hidden;
+}
+
+#menu-modal{
+	background-color: rgba(0,0,0,0.8);	
+	font-size: 48px;
+	line-height: 64px;
+	position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    text-align: center;
+    width: 100%;
+    overflow: scroll;
+    height: 100%;
+    display: none;
+    
+    ul{
+    	width: 80%;
+    	margin: 0 auto;
+    	padding-top: 32px
+    }
+
+	li{
+		padding-bottom: 64px;
+	}
+
+	&.opened{
+		display: block;
+	}
+}
 
 #dogal-main{
 	background: url('../assets/images/dogal-homepage.png');
