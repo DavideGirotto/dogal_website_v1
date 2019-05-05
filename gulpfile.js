@@ -12,7 +12,10 @@ var autoprefixer = require('autoprefixer'),
   plumber = require('gulp-plumber'),
   postcss = require('gulp-postcss'),
   rename = require('gulp-rename'),
-  sass = require('gulp-sass');
+  sass = require('gulp-sass'),
+  webpack = require('webpack'),
+  webpackconfig = require('./webpack.config.js'),
+  webpackstream = require('webpack-stream');
 
 var paths = {
   root: {
@@ -128,6 +131,7 @@ function scripts() {
     gulp
       .src([paths.javascripts.src])
       .pipe(plumber())
+      .pipe(webpackstream(webpackconfig, webpack))
       .pipe(gulp.dest(paths.javascripts.dest))
       .pipe(browsersync.stream())
   );
@@ -144,13 +148,13 @@ function watchFiles() {
     ],
     gulp.series(browserSyncReload)
   );
-  gulp.watch(paths.images.src, images);
+  // gulp.watch(paths.images.src, images);
   gulp.watch(paths.fonts.src, fonts);
 }
 
 // define complex tasks
 var js = gulp.series(scriptsLint, scripts);
-var build = gulp.series(clean, gulp.parallel(css, html, images, fonts, js));
+var build = gulp.series(clean, gulp.parallel(css, html, fonts, js));
 var watch = gulp.parallel(watchFiles, browserSync);
 
 // export tasks
