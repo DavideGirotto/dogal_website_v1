@@ -9,6 +9,12 @@
 
 @import './_fonts.scss';
 
+@media only screen and (max-width: 1087px) {
+	.columns{
+		margin-left: 0;
+	}	
+}
+
 body{
 	font-family: 'Helvetica-Light', Helvetica, Arial, sans-serif;
 	line-height: 2rem
@@ -18,6 +24,10 @@ body{
 	font-family: 'Ogg Roman', "Times New Roman", Times, serif;
 	font-weight: normal;
 	line-height: 2.5rem;
+
+	@media only screen and (max-width: 1087px) {
+		font-size: 24px;
+	}
 }
 
 .has-text-shadow{
@@ -94,6 +104,10 @@ nav {
 		bottom: 0;
 		width: 100%;
 		margin-bottom: 3%;
+
+		@media only screen and (max-width: 1087px) {
+			margin-bottom: 1%;
+		}
 	}
 
 }
