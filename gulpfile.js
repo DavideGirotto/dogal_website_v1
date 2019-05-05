@@ -119,8 +119,7 @@ function scriptsLint() {
     .src([paths.javascripts.src, './gulpfile.js'])
     .pipe(plumber())
     .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
+    .pipe(eslint.format());
 }
 
 // Transpile, concatenate and minify scripts
