@@ -74,6 +74,11 @@ nav {
 			transform: translateX(-50%);
 			display: block;
 
+			@media only screen and (max-width: 1087px) {
+				top: 32px;
+				width: 96px;
+			}
+
 			.column{
 				display: none;
 			}
