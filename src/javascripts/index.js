@@ -6,9 +6,15 @@ function stickyLogo(initPosition){
 	var windowTop = $(window).scrollTop();
 
     if (windowTop > initPosition) {
-    	$('.logo-container').addClass('stick');
+    	$('img.logo').fadeOut(300, function(){
+    		$('.logo-container').addClass('stick');
+    		$('img.navbar-logo').fadeIn(300);
+    	});
     } else {
-    	$('.logo-container').removeClass('stick');
+    	$('img.navbar-logo').fadeOut(300, function(){
+    		$('.logo-container').removeClass('stick');
+    		$('img.logo').fadeIn(300);	
+    	});
     }
 }
 
