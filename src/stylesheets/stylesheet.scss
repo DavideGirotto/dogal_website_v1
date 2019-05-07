@@ -32,7 +32,7 @@ body{
 }
 
 .has-text-shadow{
-	text-shadow: 0em 0em 3em rgba(0,0,0,1);
+	text-shadow: 0em 0em 1em rgba(0,0,0,1);
 }
 
 .navbar-burger{
@@ -171,7 +171,7 @@ nav {
 }
 
 #dogal-inspiration-01{
-	background: url('../assets/images/dogal-bottle.jpg');
+	background: url('../assets/images/dogal-craft.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -198,6 +198,14 @@ nav {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: right;
+	position: relative;
+
+	.hero-body{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100%;
+	}
 }
 
 #dogal-contacts{
