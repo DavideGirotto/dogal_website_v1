@@ -6,14 +6,14 @@ function stickyLogo(initPosition){
 	var windowTop = $(window).scrollTop();
 
     if (windowTop > initPosition) {
-    	$('img.logo').fadeOut(300, function(){
+    	$('img.logo').fadeOut(200, function(){
     		$('.logo-container').addClass('stick');
-    		$('img.navbar-logo').fadeIn(300);
+    		$('img.navbar-logo').fadeIn(400);
     	});
     } else {
-    	$('img.navbar-logo').fadeOut(300, function(){
+    	$('img.navbar-logo').fadeOut(400, function(){
     		$('.logo-container').removeClass('stick');
-    		$('img.logo').fadeIn(300);	
+    		$('img.logo').fadeIn(200);	
     	});
     }
 }
@@ -27,7 +27,7 @@ function mobileMenu(){
 }
 
 $(function () {
-	var initialPosition = $('.logo-container').offset().top - 96;
+	var initialPosition = $('.logo-container').offset().top - 72;
     
     $(window).scroll(function() {
     	stickyLogo(initialPosition);

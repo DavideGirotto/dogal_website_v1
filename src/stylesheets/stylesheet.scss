@@ -59,6 +59,7 @@ body{
 }
 
 nav {
+	background: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0.738) 19%, rgba(0, 0, 0, 0.541) 34%, rgba(0, 0, 0, 0.382) 47%, rgba(0, 0, 0, 0.278) 56.5%, rgba(0, 0, 0, 0.194) 65%, rgba(0, 0, 0, 0.126) 73%, rgba(0, 0, 0, 0.075) 80.2%, rgba(0, 0, 0, 0.042) 86.1%, rgba(0, 0, 0, 0.021) 91%, rgba(0, 0, 0, 0.008) 95.2%, rgba(0, 0, 0, 0.002) 98.2%, transparent 100%);
 	font-size: 17px;
 
 	&.is-fixed-top{
@@ -74,7 +75,8 @@ nav {
 	}
 
 	&.nav-container{
-		margin-top: 2%;
+		padding-bottom: .75rem;
+		padding-top: 2%;
 	}
 
 	.nav-menu{
@@ -134,7 +136,7 @@ nav {
 
 		&.stick{
 			position: fixed;
-			top: 96px;
+			top: 72px;
 			left: 50%;
 			width: 128px;
 			transform: translateX(-50%);
